@@ -1,0 +1,237 @@
+<html lang="en">
+    <head>        
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,500i,700" rel="stylesheet">
+        <!--Styles for Bootstrap-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!--Styles for Bootstrap Cross Browser-->
+        <link rel="stylesheet" href="css/bootstrap-reboot.css">
+        <!--Animate-->
+        <link rel="stylesheet"href="css/animate.min.css">
+        <!--Custom Styling-->
+        <link rel="stylesheet" href="css/overrides.css">
+    </head>
+    <body>
+
+        <!--main container-->
+        <div class="container-fluid">
+
+            <div class="row">
+                <!--Sidebar-->
+                <div class="col-md-2 sidebar">
+                    <div class="title">
+                        <img src="img/logo.png">
+                        <h5>Dashboard Test</h5>
+                    </div>
+                    <ul>
+                        <li class="active">
+                            <a class="Dashboard">Dashboard</a>
+                        </li>
+                        <li>
+                            <a class="Task">My Task</a>
+                        </li>
+                        <li>
+                            <a class="Project">My Project</a>
+                        </li>
+                        <li>
+                            <a class="Wallet">My Wallet</a>
+                        </li>
+                        <li>
+                            <a class="History">History Data</a>
+                        </li>
+                        <li>
+                            <a class="Invoice">Invoice</a>
+                        </li>
+                        <li>
+                            <a class="Help">Help</a>
+                        </li>                            
+                    </ul>
+                    <div class="logout">
+                        <a href="">
+                            <img src="img/log.png" />
+                            Logout
+                        </a>
+                    </div>
+                </div>
+
+                <!--Right content-->
+                <div class="col-md-10 mainContent">
+                    <!--top nav-->
+                    <div class="row justify-content-end topnav">
+                        <div class="col-md-5 profile">
+                            <div class="search sec"><img src="img/search.png"></div>
+                            <div class="not sec">
+                                <a id="getNot">
+                                    <img id="bell" src="img/bellG.png">
+                                    <span>2</span>
+                                </a>
+                                    <div id="notifications" class="notDisplayed">
+                                        <a id="close">x</a>
+                                        <img class="arrowup" src="img/arrowup.png">
+                                        <div class="note">
+                                            <img src="img/bellO.png">
+                                            XDG account expire data 23-4-2018 
+                                        </div>
+                                        <div class="note">
+                                            <img src="img/bellO.png">
+                                            XDG account expire data 23-4-2018 
+                                        </div>
+                                        <button class="btn">View All</button>
+                                    </div>
+                            </div>
+                            <div class="msgs sec">
+                                <img src="img/msg.png">
+                            </div>
+                            <div class="user sec"><img src="img/user.png"><a href=""><img src="img/droparrow.png"></a></div>
+                        </div>
+                    </div>
+
+                    <!--Graphs-->
+                    <div class="row firstGraphRow">
+                        <div class="col graphBlock creditCard">
+                            <h6>My Credit Card</h6>
+                            <img src="img/visa.png">
+                            <p class="nth-child"><label>Card number :</label>2450 24512 25412</p>
+                            <p><label>Account Name :</label>Subash Chandra</p>
+                            <p><label>Card status :</label>Active</p>
+                        </div>
+                        <div class="col graphBlock">
+                            <div class="row statHeader">
+                                <h6 class="col-8">Statistics</h6>
+                                <div class="dropdown col show">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink 0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2018</a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" type="" >2017</a>
+                                        <a class="dropdown-item" type="" >2016</a>
+                                        <a class="dropdown-item" type="" >2015</a>
+                                    </div>
+                                </div>  
+                                <div class="dropdown col show">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink 0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Month</a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" id="1" type="" >January</a>
+                                        <a class="dropdown-item" id="2" type="" >February</a>
+                                        <a class="dropdown-item" id="3" type="" >March</a>
+                                        <a class="dropdown-item" id="4" type="" >April</a>
+                                        <a class="dropdown-item" id="5" type="" >May</a>
+                                        <a class="dropdown-item" id="6" type="" >June</a>
+                                        <a class="dropdown-item" id="7" type="" >July</a>
+                                        <a class="dropdown-item" id="8" type="" >August</a>
+                                        <a class="dropdown-item" id="9" type="" >September</a>
+                                        <a class="dropdown-item" id="10" type="" >October</a>
+                                        <a class="dropdown-item" id="11" type="" >November</a>
+                                        <a class="dropdown-item" id="12" type="" >December</a>
+                                    </div>
+                                </div>  
+                            </div>                         
+                            <canvas id="myChart" chart-click="ctrl.onClick"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col graphBlock creditCard">
+                            <h6>Earning in Month </h6>
+                            <canvas id="donut" width="120" height="120"></canvas>
+                            <p class="nth-child"><label>Deposit :</label><span>$20 54 1 875 574</span></p>
+                            <p><label>Expese :</label><span>$54 1 875 574</span></p>
+                            <p><label>payable :</label><span>$805 875 574</span></p>
+                        </div>
+                        <div class="col">
+                            <div class="graphBlock withProgress progressO">
+                                <h6>Montly Sale</h6>
+                                <div class="row">
+                                    <div class="col"><h2>20 54 1 </h2><span>Today Income</span></div>
+                                    <div class="col-3"><img src="img/dec.png"></div>
+                                </div>
+                                <div id="progress" class="graph"><div id="bar" style="width:65%"><span class="arrow-up"></span><p>65%</p></div></div>
+                            </div>
+                             <div class="graphBlock withProgress progressG">
+                                <h6>Yearly Sale</h6>
+                                <div class="row">
+                                    <div class="col"><h2>20 54 125 </h2><span>Today Income</span></div>
+                                    <div class="col-3"><img src="img/inc.png"></div>
+                                </div>
+                                <div id="progress" class="graph"><div id="bar" style="width:65%"><span class="arrow-up"></span><p>65%</p></div></div>
+                            </div>
+                        </div>
+                        <div class="col graphBlock calendarBlock">
+                            <img src="img/calendar.png">
+                            <h6> Calender <span id="getDt"></span></h6>
+                            <span style="display: none" data-calendar-label="picked"></span>
+                            <div id="v-cal">
+                                <div class="vcal-header">
+                                    <button class="vcal-btn" data-calendar-toggle="previous">
+                                       <
+                                    </button>
+                                    <div class="vcal-header__label" data-calendar-label="month">
+                                        March 2017
+                                    </div>
+                                    <button class="vcal-btn" data-calendar-toggle="next">
+                                        >
+                                    </button>
+                                </div>
+                                <div class="vcal-week">
+                                    <span>Mon</span>
+                                    <span>Tue</span>
+                                    <span>Wed</span>
+                                    <span>Thu</span>
+                                    <span>Fri</span>
+                                    <span>Sat</span>
+                                    <span>Sun</span>
+                                </div>
+                                <div class="vcal-body" data-calendar-area="month"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+         <!--Scripts for Bootstrap-->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!--Notification animation-->
+        <script type="text/javascript">
+            
+            $(document).ready(function(){ 
+                $('#getNot').click(function(){ 
+                    $('#notifications').addClass('animated fadeIn');
+                    $('#notifications').removeClass('notDisplayed');
+                    $('#getNot span').empty();
+                    $('#bell').attr("src", "img/bellO.png");
+                }); 
+                $('#close').click(function(){ 
+                    $('#notifications').removeClass('animated fadeIn');
+                    $('#notifications').addClass('notDisplayed fadeOut');
+                    $('#getNot span').empty();
+                    $('#bell').attr("src", "img/bellG.png");
+                }); 
+                
+            });
+        </script>
+        <!-- Charts -->
+        <script src="js/Chart.min.js"></script>
+        <script src="js/donut.js"></script>
+        <!--Calendar-->
+        <script src="js/vanillaCalendar.js" type="text/javascript"></script>
+        <script>
+            window.addEventListener('load', function () {
+                vanillaCalendar.init({
+                    disablePastDays: true
+                });
+            })
+            var d = new Date();
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById("getDt").innerHTML = months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+        </script>
+        <!--Statistics-->
+        <script src="js/Chart.bundle.min.js"></script>
+        <script src="js/statistics.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>
